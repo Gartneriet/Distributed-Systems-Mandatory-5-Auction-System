@@ -1,28 +1,60 @@
-2025/11/20 14:19:32 client listening on halw
-2025/11/20 14:19:34 Creating new client with name halw
-2025/11/20 14:19:36 made client
-2025/11/20 14:19:36 checking what the auction is at at timestamp 0
-2025/11/20 14:19:36 betting 11.156015 at 3
-2025/11/20 14:19:38 made client
-2025/11/20 14:19:38 checking what the auction is at at timestamp 4
-2025/11/20 14:19:38 betting 19.135479 at 9
-2025/11/20 14:19:40 made client
-2025/11/20 14:19:40 checking what the auction is at at timestamp 10
-2025/11/20 14:19:42 made client
-2025/11/20 14:19:42 checking what the auction is at at timestamp 17
-2025/11/20 14:19:42 betting 37.10848 at 22
-2025/11/20 14:19:42 error querying bidding: rpc error: code = Unavailable desc = error reading from server: read tcp [::1]:64384->[::1]:5050: wsarecv: An existing connection was forcibly closed by the remote host.
-2025/11/20 14:19:44 made client
-2025/11/20 14:19:44 checking what the auction is at at timestamp 23
-2025/11/20 14:19:44 error querying auction: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5050: connectex: No connection could be made because the target machine actively refused it."
-panic: runtime error: invalid memory address or nil pointer dereference
-[signal 0xc0000005 code=0x0 addr=0x1c pc=0x7ff6c832466a]
-
-goroutine 1 [running]:
-Mandatory_5_-_Auction_System/client.(*client).Run(0xc000114000)
-	C:/Storage/ITU/3 Sem. Distributed Systems/Mandatory 5 - Auction System/client/client.go:43 +0x26a
-main.startClient({0xc00000a117, 0x4})
-	C:/Storage/ITU/3 Sem. Distributed Systems/Mandatory 5 - Auction System/main.go:32 +0xbd
-main.main()
-	C:/Storage/ITU/3 Sem. Distributed Systems/Mandatory 5 - Auction System/main.go:17 +0x125
-exit status 2
+2025/11/20 14:28:15 client listening on halw
+2025/11/20 14:28:17 Creating new client with name: halw
+2025/11/20 14:28:20 Created client
+2025/11/20 14:28:20 Fetch current highest bid from server at time: 0
+2025/11/20 14:28:20 Bidding: 20.141262 at time: 5
+2025/11/20 14:28:25 Created client
+2025/11/20 14:28:25 Fetch current highest bid from server at time: 6
+2025/11/20 14:28:25 error querying auction: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5050: connectex: No connection could be made because the target machine actively refused it."
+2025/11/20 14:28:27 Created client
+2025/11/20 14:28:27 Fetch current highest bid from server at time: 6
+2025/11/20 14:28:32 Created client
+2025/11/20 14:28:32 Fetch current highest bid from server at time: 8
+2025/11/20 14:28:32 Bidding: 54.780025 at time: 15
+2025/11/20 14:28:35 Created client
+2025/11/20 14:28:35 Fetch current highest bid from server at time: 16
+2025/11/20 14:28:35 Bidding: 77.789154 at time: 21
+2025/11/20 14:28:39 Created client
+2025/11/20 14:28:39 Fetch current highest bid from server at time: 22
+2025/11/20 14:28:41 Created client
+2025/11/20 14:28:41 Fetch current highest bid from server at time: 28
+2025/11/20 14:28:43 Created client
+2025/11/20 14:28:43 Fetch current highest bid from server at time: 29
+2025/11/20 14:28:43 Bidding: 175.22227 at time: 34
+2025/11/20 14:28:45 Created client
+2025/11/20 14:28:45 Fetch current highest bid from server at time: 35
+2025/11/20 14:28:45 Bidding: 230.58664 at time: 37
+2025/11/20 14:28:51 Created client
+2025/11/20 14:28:51 Fetch current highest bid from server at time: 38
+2025/11/20 14:28:51 Bidding: 313.92343 at time: 43
+2025/11/20 14:28:55 Created client
+2025/11/20 14:28:55 Fetch current highest bid from server at time: 44
+2025/11/20 14:29:01 Created client
+2025/11/20 14:29:01 Fetch current highest bid from server at time: 51
+2025/11/20 14:29:01 Bidding: 1191.1011 at time: 64
+2025/11/20 14:29:03 Created client
+2025/11/20 14:29:03 Fetch current highest bid from server at time: 65
+2025/11/20 14:29:03 Bidding: 1957.2775 at time: 71
+2025/11/20 14:29:07 Created client
+2025/11/20 14:29:07 Fetch current highest bid from server at time: 72
+2025/11/20 14:29:07 Bidding: 4993.3384 at time: 77
+2025/11/20 14:29:10 Created client
+2025/11/20 14:29:10 Fetch current highest bid from server at time: 78
+2025/11/20 14:29:13 Created client
+2025/11/20 14:29:13 Fetch current highest bid from server at time: 82
+2025/11/20 14:29:13 Bidding: 8049.3296 at time: 86
+2025/11/20 14:29:16 Created client
+2025/11/20 14:29:16 Fetch current highest bid from server at time: 87
+2025/11/20 14:29:16 Bidding: 13232.7295 at time: 95
+2025/11/20 14:29:18 Created client
+2025/11/20 14:29:18 Fetch current highest bid from server at time: 96
+2025/11/20 14:29:20 Created client
+2025/11/20 14:29:20 Fetch current highest bid from server at time: 98
+2025/11/20 14:29:20 Bidding: 17853.428 at time: 100
+2025/11/20 14:29:24 Created client
+2025/11/20 14:29:24 Fetch current highest bid from server at time: 101
+2025/11/20 14:29:26 Created client
+2025/11/20 14:29:26 Fetch current highest bid from server at time: 105
+2025/11/20 14:29:30 Created client
+2025/11/20 14:29:30 Fetch current highest bid from server at time: 108
+exit status 0xc000013a

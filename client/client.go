@@ -26,7 +26,8 @@ func NewClient(name string) *client {
 
 func (this *client) Run() {
 	for {
-		time.Sleep(2 * time.Second)
+		delay := time.Duration(2+rand.IntN(5)) * time.Second
+		time.Sleep(delay)
 		log.Printf("Created client")
 		conn := this.getConnection(this.primary)
 
