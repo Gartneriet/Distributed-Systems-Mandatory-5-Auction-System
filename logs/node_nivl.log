@@ -1,0 +1,25 @@
+2025/11/20 14:19:32 client listening on nivl
+2025/11/20 14:19:34 Creating new client with name nivl
+2025/11/20 14:19:36 made client
+2025/11/20 14:19:36 checking what the auction is at at timestamp 0
+2025/11/20 14:19:38 made client
+2025/11/20 14:19:38 checking what the auction is at at timestamp 5
+2025/11/20 14:19:40 made client
+2025/11/20 14:19:40 checking what the auction is at at timestamp 7
+2025/11/20 14:19:40 betting 25.26732 at 12
+2025/11/20 14:19:42 made client
+2025/11/20 14:19:42 checking what the auction is at at timestamp 13
+2025/11/20 14:19:44 made client
+2025/11/20 14:19:44 checking what the auction is at at timestamp 18
+2025/11/20 14:19:44 error querying auction: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5050: connectex: No connection could be made because the target machine actively refused it."
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal 0xc0000005 code=0x0 addr=0x1c pc=0x7ff6c832466a]
+
+goroutine 1 [running]:
+Mandatory_5_-_Auction_System/client.(*client).Run(0xc00019c5c0)
+	C:/Storage/ITU/3 Sem. Distributed Systems/Mandatory 5 - Auction System/client/client.go:43 +0x26a
+main.startClient({0xc00000a117, 0x4})
+	C:/Storage/ITU/3 Sem. Distributed Systems/Mandatory 5 - Auction System/main.go:32 +0xbd
+main.main()
+	C:/Storage/ITU/3 Sem. Distributed Systems/Mandatory 5 - Auction System/main.go:17 +0x125
+exit status 2

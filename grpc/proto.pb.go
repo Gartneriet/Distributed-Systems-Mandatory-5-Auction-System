@@ -24,7 +24,7 @@ const (
 type Bid struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Author        string                 `protobuf:"bytes,1,opt,name=author,proto3" json:"author,omitempty"`
-	Bid           int32                  `protobuf:"varint,2,opt,name=bid,proto3" json:"bid,omitempty"`
+	Bid           float32                `protobuf:"fixed32,2,opt,name=bid,proto3" json:"bid,omitempty"`
 	Timestamp     int32                  `protobuf:"varint,3,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -67,7 +67,7 @@ func (x *Bid) GetAuthor() string {
 	return ""
 }
 
-func (x *Bid) GetBid() int32 {
+func (x *Bid) GetBid() float32 {
 	if x != nil {
 		return x.Bid
 	}
@@ -84,7 +84,7 @@ func (x *Bid) GetTimestamp() int32 {
 type Result struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Status        string                 `protobuf:"bytes,1,opt,name=status,proto3" json:"status,omitempty"`
-	Bid           int32                  `protobuf:"varint,2,opt,name=bid,proto3" json:"bid,omitempty"`
+	Bid           float32                `protobuf:"fixed32,2,opt,name=bid,proto3" json:"bid,omitempty"`
 	Timestamp     int32                  `protobuf:"varint,3,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -127,7 +127,7 @@ func (x *Result) GetStatus() string {
 	return ""
 }
 
-func (x *Result) GetBid() int32 {
+func (x *Result) GetBid() float32 {
 	if x != nil {
 		return x.Bid
 	}
@@ -220,17 +220,19 @@ const file_proto_proto_rawDesc = "" +
 	"\vproto.proto\"M\n" +
 	"\x03Bid\x12\x16\n" +
 	"\x06author\x18\x01 \x01(\tR\x06author\x12\x10\n" +
-	"\x03bid\x18\x02 \x01(\x05R\x03bid\x12\x1c\n" +
+	"\x03bid\x18\x02 \x01(\x02R\x03bid\x12\x1c\n" +
 	"\ttimestamp\x18\x03 \x01(\x05R\ttimestamp\"P\n" +
 	"\x06Result\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status\x12\x10\n" +
-	"\x03bid\x18\x02 \x01(\x05R\x03bid\x12\x1c\n" +
+	"\x03bid\x18\x02 \x01(\x02R\x03bid\x12\x1c\n" +
 	"\ttimestamp\x18\x03 \x01(\x05R\ttimestamp\"\x05\n" +
 	"\x03Ack\"\a\n" +
-	"\x05Empty2:\n" +
+	"\x05Empty2W\n" +
 	"\aauction\x12\x15\n" +
 	"\aBidding\x12\x04.Bid\x1a\x04.Ack\x12\x18\n" +
-	"\x05Query\x12\x06.Empty\x1a\a.ResultB)Z'Mandatory_5_-_Auction_System/grpc/protob\x06proto3"
+	"\x05Query\x12\x06.Empty\x1a\a.Result\x12\x1b\n" +
+	"\n" +
+	"CallBackup\x12\a.Result\x1a\x04.AckB)Z'Mandatory_5_-_Auction_System/grpc/protob\x06proto3"
 
 var (
 	file_proto_proto_rawDescOnce sync.Once
@@ -254,10 +256,12 @@ var file_proto_proto_goTypes = []any{
 var file_proto_proto_depIdxs = []int32{
 	0, // 0: auction.Bidding:input_type -> Bid
 	3, // 1: auction.Query:input_type -> Empty
-	2, // 2: auction.Bidding:output_type -> Ack
-	1, // 3: auction.Query:output_type -> Result
-	2, // [2:4] is the sub-list for method output_type
-	0, // [0:2] is the sub-list for method input_type
+	1, // 2: auction.CallBackup:input_type -> Result
+	2, // 3: auction.Bidding:output_type -> Ack
+	1, // 4: auction.Query:output_type -> Result
+	2, // 5: auction.CallBackup:output_type -> Ack
+	3, // [3:6] is the sub-list for method output_type
+	0, // [0:3] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name

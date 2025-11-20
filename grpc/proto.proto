@@ -3,13 +3,13 @@ option go_package = "Mandatory_5_-_Auction_System/grpc/proto";
 
 message Bid {
   string author = 1;
-  int32 bid = 2;
+  float bid = 2;
   int32 timestamp = 3;
 }
 
 message Result {
   string status = 1;
-  int32 bid = 2;
+  float bid = 2;
   int32 timestamp = 3;
 }
 
@@ -21,4 +21,6 @@ service auction {
  rpc Bidding(Bid) returns (Ack);
 
  rpc Query(Empty) returns (Result);
+
+ rpc CallBackup(Result) returns (Ack);
 }

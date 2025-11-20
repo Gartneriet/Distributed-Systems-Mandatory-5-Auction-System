@@ -1,0 +1,27 @@
+2025/11/20 14:19:32 client listening on frap
+2025/11/20 14:19:34 Creating new client with name frap
+2025/11/20 14:19:36 made client
+2025/11/20 14:19:36 checking what the auction is at at timestamp 0
+2025/11/20 14:19:36 betting 11.540519 at 2
+2025/11/20 14:19:38 made client
+2025/11/20 14:19:38 checking what the auction is at at timestamp 3
+2025/11/20 14:19:40 made client
+2025/11/20 14:19:40 checking what the auction is at at timestamp 8
+2025/11/20 14:19:40 betting 26.81242 at 13
+2025/11/20 14:19:42 made client
+2025/11/20 14:19:42 checking what the auction is at at timestamp 14
+2025/11/20 14:19:42 betting 30.715101 at 19
+2025/11/20 14:19:44 made client
+2025/11/20 14:19:44 checking what the auction is at at timestamp 20
+2025/11/20 14:19:44 error querying auction: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:5050: connectex: No connection could be made because the target machine actively refused it."
+panic: runtime error: invalid memory address or nil pointer dereference
+[signal 0xc0000005 code=0x0 addr=0x1c pc=0x7ff6c832466a]
+
+goroutine 1 [running]:
+Mandatory_5_-_Auction_System/client.(*client).Run(0xc0001986c0)
+	C:/Storage/ITU/3 Sem. Distributed Systems/Mandatory 5 - Auction System/client/client.go:43 +0x26a
+main.startClient({0xc00000a117, 0x4})
+	C:/Storage/ITU/3 Sem. Distributed Systems/Mandatory 5 - Auction System/main.go:32 +0xbd
+main.main()
+	C:/Storage/ITU/3 Sem. Distributed Systems/Mandatory 5 - Auction System/main.go:17 +0x125
+exit status 2
