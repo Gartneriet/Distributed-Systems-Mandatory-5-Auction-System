@@ -1,0 +1,16 @@
+Section 1 (Frederik)
+Introduction. A short introduction to what you have done.
+
+Section 2 (Frederik)
+Architecture. A description of the architecture of the system and
+its protocols (behaviour), including any protocols used internally
+between nodes of the system.
+
+Section 3 (Hassan)
+Correctness 1. Argue whether your implementation satisfies
+linearisability or sequential consistency. In order to do so, first,
+you must state precisely what such property is.
+
+Section 4 (Nikolej
+Correctness 2. An argument that your protocol is correct in the
+absence and the presence of failures.
