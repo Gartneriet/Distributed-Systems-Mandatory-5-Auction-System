@@ -10,6 +10,9 @@ Section 3 (Hassan)
 Correctness 1. Argue whether your implementation satisfies
 linearisability or sequential consistency. In order to do so, first,
 you must state precisely what such property is.
+To be sequentially consistent it would mean that for any execution issued by the clients, there exists precisely a singluar correct interleaving of operation issued by the clients, and that the interleaving is consistent with the order of which they were issued by the individual clients. 
+This is where linearisability would instead require the interleaving to be consistent with the real time ordering of the operations instead of the order of which they were issued by the individual clients. Hence linearisability implies sequential consistency but NOT vice versa.
+This program is sequentially consistent but not linearisable. The server determines the interleaving of operations issued by the clients using lamport clock, and grpc makes sure interleaving is consistent with the order of which they were issued by the individual clients. 
 
 Section 4 (Nikolej
 Correctness 2. An argument that your protocol is correct in the
