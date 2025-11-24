@@ -1,10 +1,18 @@
 Section 1 (Frederik)
-Introduction. A short introduction to what you have done.
+Introduction.
+This program simulates an auction between 3 clients calling a server, which after an update to the bidding backs itself up to a backup server.
+The Auction ends after the servers logical clock, implemented using Lamport clock, hits 100-
+During runtime there is a not zero chance that the main server "crashes" and the clients switches to use the backup server.
+The endpoints for the servers are hardcoded into the clients.
+All nodes the program needs to have to run smoothly are made when running the run_all scrip, and the logs a specific node can be found in the logs folder
 
 Section 2 (Frederik)
-Architecture. A description of the architecture of the system and
-its protocols (behaviour), including any protocols used internally
-between nodes of the system.
+Architecture.
+For the auction to work GRPC is used. Here there are 4 different message types and 3 rpc services.
+The message types are: Bid, contains author, timestamp and bid, Result, contains status, bid and timestamp, Ack, which is empty and Empty, which is also empty.
+The rpc services are: Bidding, takes Bid returns Ack, Query, takes Empty returns Result and CallBackup takes Result returns Ack.
+The Bidding and Query services are used by the clients to call the server. These do so you can bid in the auction and find out if it is still ongoing and what the highest bid is at.
+The CallBackup is used between the servers, where the main server calls the backup server to update how the auction is going. This is where the programs replication happens
 
 Section 3 (Hassan)
 Correctness 1. Argue whether your implementation satisfies
