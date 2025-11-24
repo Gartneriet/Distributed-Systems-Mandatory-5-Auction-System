@@ -14,6 +14,7 @@ To be sequentially consistent it would mean that for any execution issued by the
 This is where linearisability would instead require the interleaving to be consistent with the real time ordering of the operations instead of the order of which they were issued by the individual clients. Hence linearisability implies sequential consistency but NOT vice versa.
 This program is sequentially consistent but not linearisable. The server determines the interleaving of operations issued by the clients using lamport clock, and grpc makes sure interleaving is consistent with the order of which they were issued by the individual clients. 
 
-Section 4 (Nikolej
+Section 4 (Nikolej)
 Correctness 2. An argument that your protocol is correct in the
 absence and the presence of failures.
+The program first establishes a connection to a primary server / server 1, ...
